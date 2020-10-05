@@ -1,0 +1,53 @@
+@import 'stylesheets/variables';
+@import 'stylesheets/mixins';
+
+.custom_pagination {
+  text-align: center;
+  margin-top: 32px;
+
+  .arrow_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    background: $gray-3-bg;
+    @include border-radius(2px);
+    margin: 0 3px;
+
+    .icon {
+      font-size: 9px;
+      color: $gray-9;
+    }
+
+    &.disabled {
+      cursor: default;
+
+      .icon {
+        color: $deactive-gray-6;
+      }
+    }
+  }
+
+  .item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    background: $gray-3-bg;
+    font-size: 14px;
+    color: $gray-8;
+    @include border-radius(2px);
+    @include transition(all, 0.3s, ease);
+    margin: 0 3px;
+
+    &.active,
+    &:hover {
+      background: $primary;
+      color: $gray-1;
+    }
+  }
+}
